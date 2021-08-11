@@ -30,12 +30,7 @@ function PostList({ posts, fetchPostsAndUsers }) {
   )
 }
 
-const mapStateToProps = state => {
-  console.log(state)
-  return {
-    posts: state.posts
-  }
-}
+const mapStateToProps = state => ({ posts: state.posts })
 
 export default connect(mapStateToProps, {
   fetchPostsAndUsers
