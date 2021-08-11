@@ -12,9 +12,12 @@ function PostList({ posts, fetchPostsAndUsers }) {
   const renderedPosts = posts.map(post => {
     return (
       <div key={post.id}>
-        <h2>{post.title}</h2>
+        <h2>
+          {post.id}. {post.title}
+        </h2>
         <p>{post.body}</p>
         <UserHeader userId={post.userId} />
+        <hr />
       </div>
     )
   })
